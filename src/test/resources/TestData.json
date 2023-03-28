@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://jsonplaceholder.typicode.com",
+  "empty": "{}",
+  "posts": "/posts/",
+  "users": "/users/",
+  "id5": 5,
+  "id99": 99,
+  "id150": 150
+}
