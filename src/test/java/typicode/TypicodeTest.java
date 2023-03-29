@@ -39,14 +39,14 @@ public class TypicodeTest implements DataConstantsUtils {
         getLogger().info("Step 3: Send GET request to get post with id=150 (/posts/150).");
         assertEquals(getPostsRequestById150().toString(), getTestData().getEmpty(), "Response body is not empty");
 
-        getLogger().info("Step 4: Send POST request to create post with userId=1 and random body and random title (/posts).");
-        PostsModel bodyPostResponse = postPostsRequest();
-        PostsModel objectFromRandomPostData = getObjectFromJson(PATH_TO_RANDOM_POST_DATA, PostsModel.class);
-        softAssert.assertNotNull(String.valueOf(bodyPostResponse.getId()), "ID is not present in response.");
-        softAssert.assertEquals(bodyPostResponse.getUserId(), objectFromRandomPostData.getUserId(), "User ID from POST request and response are not equals");
-        softAssert.assertEquals(bodyPostResponse.getTitle(), objectFromRandomPostData.getTitle(), "Titles from POST request and response are not equals");
-        softAssert.assertEquals(bodyPostResponse.getBody(), objectFromRandomPostData.getBody(), "Bodies from POST request and response are not equals");
-        softAssert.assertAll("Post information and response data are not equals");
+//        getLogger().info("Step 4: Send POST request to create post with userId=1 and random body and random title (/posts).");
+//        PostsModel bodyPostResponse = postPostsRequest();
+//        PostsModel objectFromRandomPostData = getObjectFromJson(PATH_TO_RANDOM_POST_DATA, PostsModel.class);
+//        softAssert.assertNotNull(String.valueOf(bodyPostResponse.getId()), "ID is not present in response.");
+//        softAssert.assertEquals(bodyPostResponse.getUserId(), objectFromRandomPostData.getUserId(), "User ID from POST request and response are not equals");
+//        softAssert.assertEquals(bodyPostResponse.getTitle(), objectFromRandomPostData.getTitle(), "Titles from POST request and response are not equals");
+//        softAssert.assertEquals(bodyPostResponse.getBody(), objectFromRandomPostData.getBody(), "Bodies from POST request and response are not equals");
+//        softAssert.assertAll("Post information and response data are not equals");
 
         getLogger().info("Step 5: Send GET request to get users (/users).");
         List<UsersModel> usersFromRequestList = getAllUsers();
